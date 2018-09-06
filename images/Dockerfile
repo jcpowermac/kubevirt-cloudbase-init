@@ -2,7 +2,8 @@ FROM registry.fedoraproject.org/fedora:28
 
 WORKDIR /
 
-COPY config/ /config
+
+COPY config/ /config/
 
 RUN dnf install -y mtools qemu-img dosfstools && \
     qemu-img create -f raw /disk.raw 2M && \
